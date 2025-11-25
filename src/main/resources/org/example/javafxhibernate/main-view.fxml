@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainBorderPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafxhibernate.MainController">
+    <top>
+        <VBox style="-fx-background-color: #2c3e50; -fx-padding: 20;">
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="btnAutores" text="Autores" style="-fx-font-size: 14; -fx-padding: 10 30; -fx-cursor: hand;" />
+                <Button fx:id="btnLibros" text="Libros" style="-fx-font-size: 14; -fx-padding: 10 30; -fx-cursor: hand;" />
+                <Button fx:id="btnPrestamos" text="Préstamos" style="-fx-font-size: 14; -fx-padding: 10 30; -fx-cursor: hand;" />
+                <Button fx:id="btnSocios" text="Socios" style="-fx-font-size: 14; -fx-padding: 10 30; -fx-cursor: hand;" />
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <VBox style="-fx-background-color: #ecf0f1;" alignment="CENTER">
+            <padding>
+                <Insets top="50" right="50" bottom="50" left="50" />
+            </padding>
+        </VBox>
+    </center>
+</BorderPane>

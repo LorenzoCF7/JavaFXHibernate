@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<VBox spacing="15" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafxhibernate.SocioController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+
+    <!-- Título -->
+    <Label text="Gestión de Socios" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+    <!-- Formulario de entrada -->
+    <VBox spacing="10" style="-fx-border-color: #95a5a6; -fx-border-radius: 5; -fx-background-color: #ffffff;">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15" />
+        </padding>
+
+        <Label text="Agregar o Modificar Socio" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+
+        <HBox spacing="10">
+            <Label text="Nombre:" style="-fx-font-size: 12;" minWidth="80" />
+            <TextField fx:id="tfNombre" promptText="Ingresa el nombre del socio" HBox.hgrow="ALWAYS" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Dirección:" style="-fx-font-size: 12;" minWidth="80" />
+            <TextField fx:id="tfDireccion" promptText="Ingresa la dirección" HBox.hgrow="ALWAYS" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Teléfono:" style="-fx-font-size: 12;" minWidth="80" />
+            <TextField fx:id="tfTelefono" promptText="Ingresa el teléfono" HBox.hgrow="ALWAYS" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Button fx:id="btnAgregar" text="Agregar" style="-fx-padding: 8 20; -fx-font-size: 12; -fx-cursor: hand;" />
+            <Button fx:id="btnModificar" text="Modificar" style="-fx-padding: 8 20; -fx-font-size: 12; -fx-cursor: hand;" />
+            <Button fx:id="btnLimpiar" text="Limpiar" style="-fx-padding: 8 20; -fx-font-size: 12; -fx-cursor: hand;" />
+        </HBox>
+    </VBox>
+
+    <!-- Búsqueda -->
+    <VBox spacing="10" style="-fx-border-color: #95a5a6; -fx-border-radius: 5; -fx-background-color: #ffffff;">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15" />
+        </padding>
+
+        <Label text="Buscar Socio" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+
+        <HBox spacing="10">
+            <TextField fx:id="tfBuscar" promptText="Ingresa el nombre del socio a buscar" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnBuscar" text="Buscar" style="-fx-padding: 8 20; -fx-font-size: 12; -fx-cursor: hand;" />
+            <Button fx:id="btnListarTodos" text="Listar Todos" style="-fx-padding: 8 20; -fx-font-size: 12; -fx-cursor: hand;" />
+        </HBox>
+    </VBox>
+
+    <!-- Tabla de socios -->
+    <VBox spacing="10" VBox.vgrow="ALWAYS">
+        <Label text="Lista de Socios" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+
+        <TableView fx:id="socioTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="50" text="ID" />
+                <TableColumn fx:id="colNombre" prefWidth="200" text="Nombre" />
+                <TableColumn fx:id="colDireccion" prefWidth="200" text="Direccion" />
+                <TableColumn fx:id="colTelefono" prefWidth="200" text="Telefono" />
+            </columns>
+        </TableView>
+
+        <HBox spacing="10">
+            <Button fx:id="btnEliminar" text="Eliminar Seleccionado" style="-fx-padding: 8 20; -fx-font-size: 12; -fx-cursor: hand; -fx-text-fill: white; -fx-background-color: #e74c3c;" />
+        </HBox>
+    </VBox>
+</VBox>
